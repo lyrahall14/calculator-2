@@ -6,7 +6,6 @@ calculator program yourself in this file.
 
 from arithmetic import *
 
-
 # Your code goes here
 
 while True:
@@ -18,52 +17,60 @@ while True:
         break
 
     if tokens[0] == "+":
-        if len(tokens) == 3:
-            print add(int(tokens[1]), int(tokens[2]))
+        tokens.remove("+")
+        if len(tokens) >= 2:
+            print my_reduce(add, tokens)
         else:
-            print "I'm sorry, you entered the wrong number of numbers. Please try again."
+            print "I'm sorry, you entered too few numbers. Please try again."
 
     elif tokens[0] == "-":
-        if len(tokens) == 3:
-            print subtract(int(tokens[1]), int(tokens[2]))
+        tokens.remove("-")
+        if len(tokens) >= 2:
+            print my_reduce(subtract, tokens)
         else:
-            print "I'm sorry, you entered the wrong number of numbers. Please try again."
+            print "I'm sorry, you entered too few numbers. Please try again."
 
     elif tokens[0] == "*":
-        if len(tokens) == 3:
-            print multiply(int(tokens[1]), int(tokens[2]))
+        tokens.remove("*")
+        if len(tokens) >= 2:
+            print my_reduce(multiply, tokens)
         else:
-            print "I'm sorry, you entered the wrong number of numbers. Please try again."
+            print "I'm sorry, you entered too few numbers. Please try again."
 
     elif tokens[0] == "/":
-        if len(tokens) == 3:
-            print divide(int(tokens[1]), int(tokens[2]))
+        tokens.remove("/")
+        if len(tokens) >= 2:
+            print my_reduce(divide, tokens)
         else:
-            print "I'm sorry, you entered the wrong number of numbers. Please try again."
+            print "I'm sorry, you entered too few numbers. Please try again."
 
     elif tokens[0] == "square":
-        if len(tokens) == 2:
-            print square(int(tokens[1]))
+        tokens.remove("square")
+        if len(tokens) >= 1:
+            print my_reduce(square, tokens)
         else:
-            print "I'm sorry, you entered the wrong number of numbers. Please try again."
+            print "I'm sorry, you entered too few numbers. Please try again."
 
     elif tokens[0] == "cube":
-        if len(tokens) == 2:
-            print cube(int(tokens[1]))
+        tokens.remove("cube")
+        if len(tokens) >= 1:
+            print my_reduce(cube, tokens)
         else:
-            print "I'm sorry, you entered the wrong number of numbers. Please try again."
+            print "I'm sorry, you entered too few numbers. Please try again."
 
     elif tokens[0] == "pow":
-        if len(tokens) == 3:
-            print power(int(tokens[1]), int(tokens[2]))
+        tokens.remove("pow")
+        if len(tokens) >= 2:
+            print my_reduce(power, tokens)
         else:
-            print "I'm sorry, you entered the wrong number of numbers. Please try again."
+            print "I'm sorry, you entered too few numbers. Please try again."
 
     elif tokens[0] == "mod":
-        if len(tokens) == 3:
-            print mod(int(tokens[1]), int(tokens[2]))
+        tokens.remove("mod")
+        if len(tokens) >= 2:
+            print my_reduce(mod, tokens)
         else:
-            print "I'm sorry, you entered the wrong number of numbers. Please try again."
+            print "I'm sorry, you entered too few numbers. Please try again."
 
     else:
         print "That is not a symbol I recognize. Please try again!"

@@ -1,5 +1,5 @@
 """Math functions for calculator."""
-
+from functools import reduce
 
 def add(num_list):
     """Return the sum of a list of integers."""
