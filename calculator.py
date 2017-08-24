@@ -17,29 +17,53 @@ while True:
         print "Now exiting program."
         break
 
-    elif tokens[0] == "+":
-        print add(int(tokens[1]), int(tokens[2]))
+    if tokens[0] == "+":
+        if len(tokens) == 3:
+            print add(int(tokens[1]), int(tokens[2]))
+        else:
+            print "I'm sorry, you entered the wrong number of numbers. Please try again."
 
     elif tokens[0] == "-":
-        print subtract(int(tokens[1]), int(tokens[2]))
+        if len(tokens) == 3:
+            print subtract(int(tokens[1]), int(tokens[2]))
+        else:
+            print "I'm sorry, you entered the wrong number of numbers. Please try again."
 
     elif tokens[0] == "*":
-        print multiply(int(tokens[1]), int(tokens[2]))
+        if len(tokens) == 3:
+            print multiply(int(tokens[1]), int(tokens[2]))
+        else:
+            print "I'm sorry, you entered the wrong number of numbers. Please try again."
 
     elif tokens[0] == "/":
-        print divide(int(tokens[1]), int(tokens[2]))
+        if len(tokens) == 3:
+            print divide(int(tokens[1]), int(tokens[2]))
+        else:
+            print "I'm sorry, you entered the wrong number of numbers. Please try again."
 
     elif tokens[0] == "square":
-        print square(int(tokens[1]))
+        if len(tokens) == 2:
+            print square(int(tokens[1]))
+        else:
+            print "I'm sorry, you entered the wrong number of numbers. Please try again."
 
     elif tokens[0] == "cube":
-        print cube(int(tokens[1]))
+        if len(tokens) == 2:
+            print cube(int(tokens[1]))
+        else:
+            print "I'm sorry, you entered the wrong number of numbers. Please try again."
 
     elif tokens[0] == "pow":
-        print power(int(tokens[1]), int(tokens[2]))
+        if len(tokens) == 3:
+            print power(int(tokens[1]), int(tokens[2]))
+        else:
+            print "I'm sorry, you entered the wrong number of numbers. Please try again."
 
     elif tokens[0] == "mod":
-        print mod(int(tokens[1]), int(tokens[2]))
+        if len(tokens) == 3:
+            print mod(int(tokens[1]), int(tokens[2]))
+        else:
+            print "I'm sorry, you entered the wrong number of numbers. Please try again."
 
     else:
         print "That is not a symbol I recognize. Please try again!"
